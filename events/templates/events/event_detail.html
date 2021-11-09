@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="event-detail">
+    <div class="events">
+        <img src="{{ event.thumb.url }}" />
+        <h2>{{ event.title }}</h2>
+        <h3>Written by {{ event.author.username }}</h3>
+        <p>{{ event.body }}</p>
+        <p>{{ event.date }}</p>
+    </div>
+</div>
+{% endblock %}

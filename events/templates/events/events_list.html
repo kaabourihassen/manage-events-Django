@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block content%}
+    <h1>Events List</h1>
+    <div class="events">
+    {% for event in events %}
+        <div class="events">
+            <h2><a href="{% url 'events:detail' slug=event.slug %}">{{ event.title }}</a></h2>
+            <p>{{ event.snippet }}</p>
+            <p>{{ event.date }}</p>
+            <p class="author">added by {{ event.author.username }}</p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
